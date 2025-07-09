@@ -34,24 +34,6 @@ O **VallentClinic** é um sistema desenvolvido em **Java puro com JDBC** para au
 
 ---
 
-## 🗂 Estrutura do projeto
-
-vallentclinic/
-├── src/
-│ ├── Entities/ # Classes modelo (Paciente, Psicólogo, Sessão, etc.)
-│ ├── DAO/ # Acesso ao banco de dados (CRUD / procedures)
-│ ├── Controllers/ # Lógica de negócio e interface com DAO
-│ ├── Validators/ # Validações personalizadas para cada entidade
-│ ├── Enums/ # Tipos fixos (status, formas de pagamento)
-│ └── MySQL/ # Conexão com o banco de dados
-├── pom.xml # Gerenciador Maven
-└── README.md
-
-yaml
-Copiar
-Editar
-
----
 
 ## 🛠 Como executar localmente
 
