@@ -10,11 +10,11 @@ import Enums.StatusPgto;
 public class ValidadorPgto {
 
 	public static void validador(Pagamento pgto) {
-		validadorSessao(pgto.getSessao());
-		validadorValor(pgto.getValor());
-		validadorData(pgto.getData_pagamento());
-		validadorPgto(pgto.getStatus_pgto());
-		
+		pgto.setSessao(validadorSessao(pgto.getSessao()));
+		pgto.setValor(validadorValor(pgto.getValor()));
+		pgto.setData_pagamento(validadorData(pgto.getData_pagamento()));
+		pgto.setStatus_pgto(validadorPgto(pgto.getStatus_pgto()));
+
 	}
 
 	private static Sessao validadorSessao(Sessao session) {
@@ -39,13 +39,14 @@ public class ValidadorPgto {
 		if (data_pagamento.isAfter(LocalDate.now())) {
 			throw new IllegalArgumentException("A data nao pode ser posteriora a data ATUAL");
 
-		}else {
+		} else {
 			return data_pagamento;
 		}
 
 	}
+
 	private static StatusPgto validadorPgto(StatusPgto statusPgto) {
-		//criar um validador, no momento sem ideias.
+		// criar um validador, no momento sem ideias.
 		return statusPgto;
 	}
 

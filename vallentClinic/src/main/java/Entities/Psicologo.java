@@ -47,6 +47,4 @@ public class Psicologo extends Pessoa {
 		this.horario = horario;
 	}
 
-	
-
 }

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class MySQL {
 
-	private static final String url = "jdbc:mysql://localhost:3306/dbcontrolecontas";
+	private static final String url = "jdbc:mysql://localhost:3306/vallent";
 	private static final String usr = "root";
 	private static final String pwd = "";
 

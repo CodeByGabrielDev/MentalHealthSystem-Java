@@ -10,10 +10,21 @@ import Enums.StatusSessao;
 public class ValidadorSessao {
 
 	public static void validador(Sessao session) {
-		validadorPaciente(session.getPaciente());
-		validadorPsicologo(session.getPsicologo());
-		validadorData(session.getData_hora());
-		
+		/*
+		 * 	private int id;
+	private Paciente paciente;
+	private Psicologo psicologo;
+	private LocalDate data_hora;
+	private double valor;
+	private StatusSessao status;
+	private String obs;
+		 */
+		session.setPaciente(validadorPaciente(session.getPaciente()));
+		session.setPsicologo(validadorPsicologo(session.getPsicologo()));
+		session.setData_hora(validadorData(session.getData_hora()));
+		session.setValor(validadorValor(session.getValor()));
+		session.setStatus(validadorSessao(session.getStatus()));
+		session.setObs(validadorObs(session.getObs()));
 		
 	}
 	private static Paciente validadorPaciente(Paciente paciente) {

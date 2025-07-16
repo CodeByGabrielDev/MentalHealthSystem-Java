@@ -5,23 +5,7 @@ import java.time.Period;
 
 public abstract class Pessoa {
 
-	/*
-	 * id
-	 * 
-	 * nome
-	 * 
-	 * cpf
-	 * 
-	 * rg
-	 * 
-	 * dataNascimento
-	 * 
-	 * telefone
-	 * 
-	 * email
-	 * 
-	 * endereco
-	 */
+	
 	private int id;
 	private String nome;
 	private String cpf;

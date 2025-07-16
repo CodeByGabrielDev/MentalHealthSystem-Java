@@ -20,6 +20,13 @@ public class Convenio {
 		this.email = email;
 	}
 
+	public Convenio(String nome, String cnpj, String telefone, String email) {
+		this.nome = nome;
+		this.cnpj = cnpj;
+		this.telefone = telefone;
+		this.email = email;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -68,13 +75,20 @@ public class Convenio {
 		}
 
 	}
-	
+
 	public static String formatadorTelefone(String telefone) {
-		if(telefone.contains("(") || telefone.contains(")")||telefone.contains("-")) {
+		if (telefone.contains("(") || telefone.contains(")") || telefone.contains("-")) {
 			return telefone.replace("(", "").replace(")", "").replace("-", "").trim();
-			
-		}else {
+
+		} else {
 			return telefone;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Convenio ->\n" + id + "\n, nome=" + nome + "\n, cnpj=" + cnpj + "\n, telefone=" + telefone + "\n, email="
+				+ email;
+	}
+
 }

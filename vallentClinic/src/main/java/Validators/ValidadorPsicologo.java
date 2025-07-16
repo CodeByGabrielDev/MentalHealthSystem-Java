@@ -6,8 +6,8 @@ import Enums.EspecialidadesPsi;
 public class ValidadorPsicologo {
 
 	public static void validador(Psicologo psi) {
-		validadorCrp(psi.getCrp());
-		validadorEspecialidade(psi.getEspecialidade());
+		psi.setCrp(validadorCrp(psi.getCrp()));
+		psi.setEspecialidade(validadorEspecialidade(psi.getEspecialidade()));
 
 	}
 

@@ -5,9 +5,10 @@ import Entities.Convenio;
 public class ValidadorConvenio {
 
 	public static void validador(Convenio convenio) {
-		validarNome(convenio.getNome());
-		validarCnpj(convenio.getCnpj());
-		validarTelefone(convenio.getTelefone());
+		convenio.setNome(validarNome(convenio.getNome()));
+		convenio.setCnpj(validarCnpj(convenio.getCnpj()));
+		convenio.setTelefone(validarTelefone(convenio.getTelefone()));
+		convenio.setEmail(validadorEmail(convenio.getEmail()));
 
 	}
 	/*
@@ -20,6 +21,12 @@ public class ValidadorConvenio {
 			throw new IllegalArgumentException("nome nao pode estar vazio ou null");
 
 		} else {
+			for (char c : nome.toCharArray()) {
+				if (!Character.isLetter(c) && !Character.isSpaceChar(c)) {
+					throw new IllegalArgumentException("o nome nao pode conter NUMEROS, revise os dados");
+				}
+
+			}
 			return nome;
 		}
 
@@ -28,17 +35,16 @@ public class ValidadorConvenio {
 	private static String validarCnpj(String cnpj) {
 		if (cnpj == null || cnpj.isBlank()) {
 			throw new IllegalArgumentException("o cnpj não pode estar vazio");
-		} else {
-			for (char c : cnpj.toCharArray()) {
-				if (Character.isLetter(c)) {
-					throw new IllegalArgumentException("o cnpj nao pode conter numeros.");
-
-				}
+		}
+		for (char c : cnpj.toCharArray()) {
+			if (Character.isLetter(c)) {
+				throw new IllegalArgumentException("o cnpj nao pode conter LETRAS, revise os dados.");
 
 			}
-			return cnpj.replace("/", "").replace("-", "").replace(".", "").trim();
-		}
 
+		}
+		String formatador = cnpj.replace("/", "").replace("-", "").replace(".", "");
+		return formatador;
 	}
 
 	private static String validarTelefone(String telefone) {
@@ -52,6 +58,22 @@ public class ValidadorConvenio {
 
 			}
 			return telefone.replace("-", "").replace(".", "").replace("+", "").trim();
+		}
+
+	}
+
+	private static String validadorEmail(String email) {
+		if (email == null || email.isBlank()) {
+			throw new IllegalArgumentException("O email nao pode estar em branco, revise os dados");
+		} else {
+			for (char c : email.toCharArray()) {
+				if (Character.isSpaceChar(c)) {
+					throw new IllegalArgumentException("O email nao pode conter espaços em branco");
+
+				}
+
+			}
+			return email;
 		}
 
 	}

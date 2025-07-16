@@ -7,10 +7,11 @@ import Enums.statusPaciente;
 public class ValidadorPaciente {
 
 	public static void validador(Paciente paciente) {
-		validadorProntuario(paciente.getNumero_prontuario());
-		validadorConvenio(paciente.getConvenio());
-		validadorObs(paciente.getObs());
-		validadorStatus(paciente.getStats());
+
+		paciente.setNumero_prontuario(validadorProntuario(paciente.getNumero_prontuario()));
+		paciente.setConvenio(validadorConvenio(paciente.getConvenio()));
+		paciente.setObs(validadorObs(paciente.getObs()));
+		paciente.setStats(validadorStatus(paciente.getStats()));
 
 	}
 

@@ -2,16 +2,20 @@ package Validators;
 
 import java.time.LocalDate;
 
+import Entities.Pessoa;
+
 public class ValidatorPessoa {
 
-	public static void validar() {
+	public static void validar(Pessoa pessoa) {
+		pessoa.setNome(validadorNome(pessoa.getNome()));
+		pessoa.setCpf(validadorCpf(pessoa.getCpf()));
+		pessoa.setRg(validadorRg(pessoa.getRg()));
+		pessoa.setData_nascimento(validadorDate(pessoa.getData_nascimento()));
+		pessoa.setTelefone(formatadorTelefone(pessoa.getTelefone()));
+		pessoa.setEmail(validadorEmail(pessoa.getEmail()));
+		pessoa.setEndereco(validadorEndereco(pessoa.getEndereco()));
 
 	}
-	/*
-	 * private int id; private String nome; private String cpf; private String rg;
-	 * private LocalDate data_nascimento; private String telefone; private String
-	 * email; private String endereco;
-	 */
 
 	// METODOS AUXILIARES QUE IRAO REALIZAR A VALIDAÇÃO NO METODO ACIMA.
 	private static String validadorNome(String nome) {
