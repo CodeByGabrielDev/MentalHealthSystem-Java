@@ -17,6 +17,7 @@ O **VallentClinic** é um sistema desenvolvido em **Java puro com JDBC** para au
 - ✅ **JDBC (Java Database Connectivity)**
 - ✅ **Maven**
 - ✅ **Procedures (Stored Procedures)**
+- ✅ **Triggers **
 - ✅ **POO (Programação Orientada a Objetos)**
 - ✅ **Validações manuais com classes `Validator`**
 
@@ -64,7 +65,7 @@ Praticar estruturação de sistemas em camadas organizadas
 
 Aplicar lógica de negócio com validações reais
 
-Integrar banco de dados com stored procedures
+Integrar banco de dados com stored procedures e Triggers
 
 Desenvolver um sistema funcional sem frameworks, com foco em lógica pura
 
