@@ -1,52 +1,66 @@
-# 🧠 VallentClinic - Sistema de Gestão para Clínica de Psicologia
+🧠 VallentClinic – Sistema de Gestão para Clínica de Psicologia
+⚠️ Projeto em andamento – Este sistema está em constante desenvolvimento. Algumas funcionalidades ainda estão sendo implementadas e validadas.
 
-> ⚠️ **Projeto em andamento** — Esta aplicação está em constante desenvolvimento e evolução. Algumas funcionalidades ainda estão sendo implementadas e validadas.
+📌 Sobre o Projeto
+O VallentClinic é um sistema desenvolvido em Java puro com JDBC, com o objetivo de oferecer uma solução robusta para a gestão de clínicas de psicologia. A aplicação foi construída com foco na organização em camadas, integridade dos dados e modelagem realista das regras de negócio.
 
----
+🎯 Objetivos do Projeto
+Consolidar conhecimentos em Java com Programação Orientada a Objetos (POO)
 
-## 📌 Sobre o projeto
+Praticar estruturação em camadas: Entities, DAO, Controller, Validators, Enums
 
-O **VallentClinic** é um sistema desenvolvido em **Java puro com JDBC** para auxiliar na gestão de clínicas de psicologia. O sistema foi estruturado com foco na organização e integridade de dados, contemplando pacientes, psicólogos, convênios, sessões e pagamentos.
+Aplicar lógica de negócio com validações reais (CPF, CNPJ, datas, nomes, etc.)
 
----
+Integrar banco de dados utilizando Stored Procedures e Triggers
 
-## 🚀 Tecnologias utilizadas
+Desenvolver um sistema funcional sem uso de frameworks (como Spring ou Hibernate), com foco na lógica pura
 
-- ✅ **Java 17**
-- ✅ **MySQL 8**
-- ✅ **JDBC (Java Database Connectivity)**
-- ✅ **Maven**
-- ✅ **Procedures (Stored Procedures)**
-- ✅ **Triggers**
-- ✅ **POO (Programação Orientada a Objetos)**
-- ✅ **Validações manuais com classes `Validator`**
+⚙️ Funcionalidades
+👤 Cadastro e consulta de pacientes e psicólogos
 
----
+📑 Gerenciamento de convênios
 
-## ⚙️ Funcionalidades
+📅 Controle de agenda e sessões clínicas
 
-- 👥 Cadastro e consulta de **pacientes** e **psicólogos**
-- 📑 Registro e busca de **convênios**
-- 📆 Controle de **agenda** e **sessões**
-- 💳 Lançamento de **pagamentos** com formas e status distintos
-- 🔍 Execução de **procedures SQL** para consultas otimizadas
-- 🧪 Validação completa de entradas: nomes, datas, CPF, CNPJ, e mais
-- 📁 Separação por **camadas**: `Entities`, `DAO`, `Controller`, `Validators`, `Enums`
+💳 Registro de pagamentos com diferentes formas e status
 
----
+🧾 Geração e controle de notas fiscais
 
+🔐 Validações completas de entrada via classes Validator
 
-## 🛠 Como executar localmente
+🧠 Execução de procedures SQL e uso de triggers no banco
 
-1. **Clone o repositório:**
+🧩 Arquitetura em camadas com clara separação de responsabilidades
 
-```bash
+🚀 Tecnologias Utilizadas
+✅ Java 17
+
+✅ JDBC (Java Database Connectivity)
+
+✅ MySQL 8
+
+✅ Maven
+
+✅ Stored Procedures
+
+✅ Triggers
+
+✅ POO (Programação Orientada a Objetos)
+
+✅ Validações manuais com Validator
+
+🛠️ Como Executar Localmente
+Clone o repositório:
+
+bash
+Copiar
+Editar
 git clone https://github.com/CodeByGabrielDev/vallentclinic.git
 Configure o banco de dados MySQL:
 
-Crie o schema e execute os scripts de tabelas e procedures
+Crie o schema (vallentclinic) e execute os scripts SQL com as tabelas e procedures.
 
-Ajuste a classe MySQL.java com suas credenciais:
+Atualize a classe MySQL.java com suas credenciais:
 
 java
 Copiar
@@ -54,20 +68,8 @@ Editar
 String url = "jdbc:mysql://localhost:3306/seubanco";
 String user = "root";
 String password = "sua_senha";
-Execute o projeto via IDE (Eclipse, IntelliJ, etc.)
+Execute o projeto pela sua IDE preferida (Eclipse, IntelliJ, NetBeans...)
 
+🧾 Observações Finais
+Este projeto foi desenvolvido sem o uso de frameworks como Spring ou Hibernate de forma proposital, com o intuito de reforçar o domínio da linguagem Java, entender em profundidade o JDBC e exercitar lógica aplicada a cenários reais de negócio.
 
-
-🎯 Objetivos do projeto
-Consolidar conhecimento em Java Orientado a Objetos
-
-Praticar estruturação de sistemas em camadas organizadas
-
-Aplicar lógica de negócio com validações reais
-
-Integrar banco de dados com stored procedures e Triggers
-
-Desenvolver um sistema funcional sem frameworks, com foco em lógica pura
-
-📌 Observação final
-Este projeto está sendo desenvolvido sem frameworks como Spring ou Hibernate intencionalmente, para aprofundar o domínio da linguagem Java, JDBC e a lógica aplicada em cada etapa do processo de desenvolvimento.
