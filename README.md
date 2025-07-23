@@ -49,3 +49,33 @@ O **VallentClinic** é um sistema robusto desenvolvido em **Java puro com JDBC**
 
 ```bash
 git clone https://github.com/CodeByGabrielDev/vallentclinic.git
+Configure o banco de dados MySQL:
+
+Crie o schema e execute os scripts de criação de tabelas e procedures.
+
+Atualize a classe MySQL.java com suas credenciais:
+
+java
+Copiar
+Editar
+String url = "jdbc:mysql://localhost:3306/seubanco";
+String user = "root";
+String password = "sua_senha";
+Execute o projeto via sua IDE preferida (Eclipse, IntelliJ etc.)
+
+🎯 Objetivos do projeto
+Consolidar conhecimento em Java Orientado a Objetos
+
+Praticar estruturação de sistemas reais com regras de negócio
+
+Trabalhar com persistência de dados usando JDBC e SQL
+
+Aplicar lógica de validação manual e tratamento de exceções
+
+Implementar estrutura completa de DAO/Controller/Entities
+
+Criar um sistema funcional e organizado sem frameworks, com foco em lógica pura
+
+📌 Observação final
+Este projeto foi idealizado para simular o desenvolvimento de um sistema real, com forte foco em lógica, organização de código e aplicação prática de conceitos de POO, banco de dados, SQL avançado e engenharia de software.
+É um passo importante na minha trajetória rumo à especialização em desenvolvimento backend com Java.
