@@ -1,6 +1,0 @@
-package Enums;
-
-public enum Tipos_pgto {
-
-	DINHEIRO, CREDITO, DEBITO, PIX, BOLETO, TRANSFERENCIA, CONVENIO, GRATUITO, REEMBOLSO
-}
